@@ -1,0 +1,44 @@
+@import '../../../styles/main.scss';
+
+.radar__button {
+  align-items: left;
+  border: none;
+  border-radius: $border-radius-button;
+  display: flex;
+  color: $white;
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 400;
+  padding: 6px 12px;
+  font-family: 'Source Sans 3', sans-serif;
+  @include center;
+
+
+
+
+  &--primary {
+    background-color: $primary-color;
+
+    &:active{
+      background-color: $bg-button-primary-active;
+    }
+  }
+
+  &--secondary {
+    background-color: $secondary-color;
+
+    &:active{
+      background-color: $bg-button-secondary-active;
+    }
+  }
+
+  &--fullWidth {
+    width: 100%;
+  }
+
+  &__icon {
+    margin-left: 4px;
+    display: flex;
+    align-items: center;
+  }
+}

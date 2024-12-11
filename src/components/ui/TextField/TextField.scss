@@ -1,0 +1,49 @@
+@import '../../../styles/variables';
+
+.radar__textfield {
+  font-family: 'Source Sans 3', sans-serif;
+  display: flex;
+  flex-direction: column;
+  font-weight: 400;
+
+
+  &__label {
+    font-size: 14px;
+    line-height: 17.5px;
+    margin-bottom: 2px;
+    text-align: left;
+  }
+
+  &__input {
+    color: $grey;
+    font-family: inherit;
+    padding: 6px;
+    border: 1px solid $primary-color;
+    border-radius: $border-radius-textfield;
+    font-size: 16px;
+    background-color: $bg-input;
+    line-height: 18px;
+
+    &--primary {
+      background-color: $bg-input;
+    }
+
+    &--secondary {
+      background-color: $bg-input-secondary;
+      border: 1px solid $secondary-color
+    }
+
+    &--error {
+      border-color: $red;
+      background-color: $bg-input-error;
+    }
+  }
+
+  &__error {
+    color: $red;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: left;
+    margin-top: 2px;
+  }
+}
