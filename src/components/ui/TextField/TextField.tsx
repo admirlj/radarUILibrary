@@ -39,7 +39,8 @@ const TextField: React.FC<TextFieldProps> = ({
       <input
         type="text"
         className={`radar__textfield__input ${
-          error ? "radar__textfield__input--error" : ""}
+          error ? "radar__textfield__input--error" : ""
+        }
           ${variant && `radar__textfield__input--${variant}`}
         `}
         placeholder={placeholder}
