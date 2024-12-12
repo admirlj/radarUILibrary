@@ -19,8 +19,8 @@ const Button: React.FC<ButtonProps> = ({
   disabled = false,
 }) => {
   const buttonClass = `radar__button radar__button--${variant} ${
-    fullWidth && `radar__button--fullWidth`
-  } ${disabled && `radar__button--disabled`}`;
+    fullWidth && "radar__button--fullWidth"
+  } ${disabled && "radar__button--disabled"}`;
 
   return (
     <button
