@@ -1,8 +1,8 @@
 import { useState } from "react";
 import "./App.scss";
-import Button from "./components/ui/Button/Button";
-import TextField from "./components/ui/TextField/TextField";
-import ArrowBack from "./components/icons/ArrowBack/ArrowBack";
+import Button from "./components/ui/Button";
+import TextField from "./components/ui/TextField";
+import { ArrowBack } from "./components/icons";
 
 function App() {
   const [inputValue, setInputValue] = useState<undefined | string>();
@@ -27,7 +27,7 @@ function App() {
 
   return (
     <>
-      <div className="flex-center">
+      <section className="flex-center">
         <TextField
           onChange={handleOnChange}
           validate={validation}
@@ -44,7 +44,7 @@ function App() {
         >
           Submit
         </Button>
-      </div>
+      </section>
       {textToShow && (
         <div className="output">
           <p className="output__paragraph">{textToShow}</p>
