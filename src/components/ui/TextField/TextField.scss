@@ -44,6 +44,8 @@
   }
 
   &__error {
+    display: flex;
+    align-items: center;
     position: absolute;
     bottom: -18px;
     color: $red;

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./TextField.scss";
+import WarningIcon from "../../icons/Warning/Warning";
 
 type TextFieldProps = {
   label?: string;
@@ -48,7 +49,7 @@ const TextField: React.FC<TextFieldProps> = ({
         onChange={handleOnChange}
       />
 
-      {error && <span className="radar__textfield__error">{errorMessage}</span>}
+      {error && <span className="radar__textfield__error"> <WarningIcon /> {errorMessage}</span>}
     </div>
   );
 };

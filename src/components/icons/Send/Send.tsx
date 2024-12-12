@@ -1,14 +1,14 @@
 type SendProps = {
-  width: number;
-  height: number;
+  width?: string;
+  height?: string;
 };
 
-const Send: React.FC<SendProps> = ({ width, height }) => {
+const Send: React.FC<SendProps> = ({ width = "16", height = "16" }) => {
   return (
     <svg
-      width={`${width}px`}
-      height={`${height}px`}
-      viewBox={`0 0 ${width}px ${height}px`}
+      width={width}
+      height={height}
+      viewBox={`0 0 ${width} ${height}`}
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >

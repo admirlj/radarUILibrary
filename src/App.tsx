@@ -1,8 +1,8 @@
 import { useState } from "react";
 import "./App.scss";
-import SendIcon from "./components/icons/Send/Send";
 import Button from "./components/ui/Button/Button";
 import TextField from "./components/ui/TextField/TextField";
+import ArrowBack from "./components/icons/ArrowBack/ArrowBack";
 
 function App() {
   const [inputValue, setInputValue] = useState<undefined | string>();
@@ -33,14 +33,14 @@ function App() {
           validate={validation}
           label="Text producer"
           errorMessage="No numbers allowed!"
-          variant="secondary"
+          variant="primary"
         />
         <Button
-          trailingIcon={<SendIcon width={16} height={16} />}
+          trailingIcon={<ArrowBack />}
           style={{ marginLeft: "16px" }}
           onClick={handleOnClick}
           disabled={error}
-          variant="secondary"
+          variant="primary"
         >
           Submit
         </Button>
