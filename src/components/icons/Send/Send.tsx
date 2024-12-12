@@ -1,6 +1,6 @@
 type SendProps = {
-  width: string;
-  height: string;
+  width: number;
+  height: number;
 };
 
 const Send: React.FC<SendProps> = ({ width, height }) => {

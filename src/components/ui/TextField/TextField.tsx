@@ -29,7 +29,7 @@ const TextField: React.FC<TextFieldProps> = ({
     setValue(newValue);
 
     if (onChange) onChange(newValue);
-    if (validate) setError(!validate(newValue));
+    if (validate) setError(validate(newValue));
   };
 
   return (

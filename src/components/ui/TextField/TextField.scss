@@ -5,13 +5,17 @@
   display: flex;
   flex-direction: column;
   font-weight: 400;
+  position: relative;
 
 
   &__label {
+    position: absolute;
+    color: $grey;
     font-size: 14px;
     line-height: 17.5px;
     margin-bottom: 2px;
     text-align: left;
+    top: -17.5px;
   }
 
   &__input {
@@ -40,10 +44,12 @@
   }
 
   &__error {
+    position: absolute;
+    bottom: -18px;
     color: $red;
     font-size: 12px;
     line-height: 15px;
     text-align: left;
-    margin-top: 2px;
+    margin-top: 6px;
   }
 }
