@@ -6,6 +6,7 @@
   flex-direction: column;
   font-weight: 400;
   position: relative;
+  margin: 20px 0;
 
 
   &__label {
@@ -15,7 +16,7 @@
     line-height: 17.5px;
     margin-bottom: 2px;
     text-align: left;
-    top: -17.5px;
+    top: -18px;
   }
 
   &__input {
@@ -53,5 +54,9 @@
     line-height: 15px;
     text-align: left;
     margin-top: 6px;
+
+    & svg{
+      margin-right: 2px
+    }
   }
 }

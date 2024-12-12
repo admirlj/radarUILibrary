@@ -10,6 +10,7 @@ type TextFieldProps = {
   validate?: (value: string) => boolean;
   errorMessage?: string;
   variant?: "primary" | "secondary";
+  style?: React.CSSProperties;
 };
 
 const TextField: React.FC<TextFieldProps> = ({
@@ -20,6 +21,7 @@ const TextField: React.FC<TextFieldProps> = ({
   validate,
   errorMessage,
   variant = "primary",
+  style, // optional prop for inline style
 }) => {
   const [value, setValue] = useState(initialValue);
   const [error, setError] = useState(false);
@@ -34,22 +36,24 @@ const TextField: React.FC<TextFieldProps> = ({
   };
 
   return (
-    <div className="radar__textfield">
+    <div style={style} className="radar__textfield">
       {label && <label className="radar__textfield__label">{label}</label>}
 
       <input
         type="text"
         className={`radar__textfield__input ${
-          error ? "radar__textfield__input--error" : ""
-        }
-          ${variant && `radar__textfield__input--${variant}`}
-        `}
+          error && "radar__textfield__input--error"
+        }${variant && `radar__textfield__input--${variant}`}`}
         placeholder={placeholder}
         value={value}
         onChange={handleOnChange}
       />
 
-      {error && <span className="radar__textfield__error"> <WarningIcon /> {errorMessage}</span>}
+      {error && (
+        <span className="radar__textfield__error">
+          <WarningIcon /> {errorMessage}
+        </span>
+      )}
     </div>
   );
 };

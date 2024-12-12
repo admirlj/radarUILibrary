@@ -15,12 +15,12 @@ const Button: React.FC<ButtonProps> = ({
   trailingIcon,
   variant = "primary",
   fullWidth,
-  style,
+  style, // optional props for inline style
   disabled = false,
 }) => {
   const buttonClass = `radar__button radar__button--${variant} ${
     fullWidth && `radar__button--fullWidth`
-  } ${ disabled && `radar__button--disabled`}`;
+  } ${disabled && `radar__button--disabled`}`;
 
   return (
     <button
