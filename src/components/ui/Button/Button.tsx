@@ -4,6 +4,7 @@ type ButtonProps = {
   children: React.ReactNode;
   onClick: () => void;
   variant?: "primary" | "secondary";
+  id?: string;
   trailingIcon?: React.ReactNode;
   fullWidth?: boolean;
   style?: React.CSSProperties;
@@ -12,6 +13,7 @@ type ButtonProps = {
 const Button: React.FC<ButtonProps> = ({
   children,
   onClick,
+  id,
   trailingIcon,
   variant = "primary",
   fullWidth,
@@ -24,6 +26,7 @@ const Button: React.FC<ButtonProps> = ({
 
   return (
     <button
+      id={id}
       disabled={disabled}
       onClick={onClick}
       className={buttonClass}

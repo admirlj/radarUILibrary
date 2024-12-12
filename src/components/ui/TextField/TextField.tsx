@@ -9,8 +9,10 @@ type TextFieldProps = {
   onChange?: (value: string) => void;
   validate?: (value: string) => boolean;
   errorMessage?: string;
+  id?: string;
   variant?: "primary" | "secondary";
   style?: React.CSSProperties;
+  type?: "number" | "text" | "password";
 };
 
 const TextField: React.FC<TextFieldProps> = ({
@@ -20,8 +22,10 @@ const TextField: React.FC<TextFieldProps> = ({
   onChange,
   validate,
   errorMessage,
+  id,
   variant = "primary",
   style, // optional prop for inline style
+  type = "text",
 }) => {
   const [value, setValue] = useState(initialValue);
   const [error, setError] = useState(false);
@@ -40,7 +44,8 @@ const TextField: React.FC<TextFieldProps> = ({
       {label && <label className="radar__textfield__label">{label}</label>}
 
       <input
-        type="text"
+        id={id}
+        type={type}
         className={`radar__textfield__input ${
           error && "radar__textfield__input--error"
         }${variant && `radar__textfield__input--${variant}`}`}
