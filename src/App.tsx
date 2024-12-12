@@ -5,21 +5,21 @@ import Button from "./components/ui/Button/Button";
 import TextField from "./components/ui/TextField/TextField";
 
 function App() {
-  const [firstName, setFirstName] = useState<undefined | string>();
+  const [inputValue, setInputValue] = useState<undefined | string>();
   const [textToShow, setTextToShow] = useState<string>();
   const [error, setError] = useState(false);
 
   const handleOnChange = (value: string) => {
     const inputValue = value;
-    if (inputValue) setFirstName(inputValue);
+    setInputValue(inputValue);
   };
 
   const handleOnClick = () => {
-    if (firstName) setTextToShow(firstName);
+    setTextToShow(inputValue);
   };
 
   const validation = (value: string) => {
-    // Check if the value contains any numbers using a regular expression
+    // Check if the value contains any numbers
     const numberPattern = /\d/;
     setError(numberPattern.test(value));
     return numberPattern.test(value);
@@ -33,12 +33,14 @@ function App() {
           validate={validation}
           label="Text producer"
           errorMessage="No numbers allowed!"
+          variant="secondary"
         />
         <Button
           trailingIcon={<SendIcon width={16} height={16} />}
           style={{ marginLeft: "16px" }}
           onClick={handleOnClick}
           disabled={error}
+          variant="secondary"
         >
           Submit
         </Button>
