@@ -8,19 +8,20 @@ Most of the project is written in TS and SCSS, and it uses functional controlled
 - styles directory contains all style related files (_variables.scss, _mixins.scss and main.scss) main acting as master style file that pulls other files with prefix _.
 - components directory contains ui directory with two main components Button and TextField and, icon directory that holds SVG components that can be used for example on Button component.
 
+---
 
-
-# Installation
-1: Clone the repository
+## Installation
+1. Clone the repository
 - https://github.com/admirlj/radarUILibrary.git
-2: Install all dependencies
+2. Install all dependencies
 - npm i / npm install
-3: Run the project
+3. Run the project
 - npm run dev
 
+---
 
-# Tests
+## Tests
 - Using Jest and React library for testing purposes
 - To run unit tests on component :
-  1: Open terminal where project is located ("/Users/yourName/Desktop/radarUiLibrary")
-  2: Run the following command: npm run test or npm run test:watch (scripts are defined and can be modified inside package.json file)
+  1. Open terminal where project is located ("/Users/yourName/Desktop/radarUiLibrary")
+  2. Run the following command: npm run test or npm run test:watch (scripts are defined and can be modified inside package.json file)
