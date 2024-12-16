@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./App.scss";
 import Button from "./components/ui/Button";
 import TextField from "./components/ui/TextField";
-import { ArrowBack } from "./components/icons";
+import { Send } from "./components/icons";
 
 function App() {
   const [inputValue, setInputValue] = useState<undefined | string>();
@@ -36,7 +36,7 @@ function App() {
           variant="primary"
         />
         <Button
-          trailingIcon={<ArrowBack dataTestid={"arrowBack"} />}
+          trailingIcon={<Send />}
           style={{ marginLeft: "16px" }}
           onClick={handleOnClick}
           disabled={error}
