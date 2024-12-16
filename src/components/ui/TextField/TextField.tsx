@@ -13,6 +13,7 @@ type TextFieldProps = {
   variant?: "primary" | "secondary";
   style?: React.CSSProperties;
   type?: "number" | "text" | "password";
+  dataTestId?: string;
 };
 
 const TextField: React.FC<TextFieldProps> = ({
@@ -26,6 +27,7 @@ const TextField: React.FC<TextFieldProps> = ({
   variant = "primary",
   style, // optional prop for inline style
   type = "text",
+  dataTestId,
 }) => {
   const [value, setValue] = useState(initialValue);
   const [error, setError] = useState(false);
@@ -45,6 +47,7 @@ const TextField: React.FC<TextFieldProps> = ({
 
       <input
         id={id}
+        data-testid={dataTestId}
         type={type}
         className={`radar__textfield__input ${
           error && "radar__textfield__input--error"
