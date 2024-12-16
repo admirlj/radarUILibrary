@@ -23,7 +23,7 @@ describe("Button component", () => {
     const handleClickMock = jest.fn();
     render(
       <Button onClick={handleClickMock} variant="primary">
-        Send
+        {ButtonLabel}
       </Button>
     );
     const buttonComponent = screen.getByText(ButtonLabel);
@@ -34,7 +34,7 @@ describe("Button component", () => {
     const handleClickMock = jest.fn();
     render(
       <Button onClick={handleClickMock} fullWidth>
-        Send
+        {ButtonLabel}
       </Button>
     );
     const buttonComponent = screen.getByText(ButtonLabel);
@@ -45,7 +45,7 @@ describe("Button component", () => {
     const handleClickMock = jest.fn();
     render(
       <Button onClick={handleClickMock} disabled>
-        Send
+        {ButtonLabel}
       </Button>
     );
     const button = screen.getByText(ButtonLabel);
