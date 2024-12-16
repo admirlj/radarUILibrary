@@ -36,7 +36,7 @@ function App() {
           variant="primary"
         />
         <Button
-          trailingIcon={<ArrowBack />}
+          trailingIcon={<ArrowBack dataTestid={"arrowBack"} />}
           style={{ marginLeft: "16px" }}
           onClick={handleOnClick}
           disabled={error}

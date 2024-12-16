@@ -1,14 +1,17 @@
 type ArrowBackProps = {
   width?: string;
   height?: string;
+  dataTestid?: string;
 };
 
 const ArrowBack: React.FC<ArrowBackProps> = ({
+  dataTestid,
   width = "16",
   height = "16",
 }) => {
   return (
     <svg
+      data-testid={dataTestid}
       width={width}
       height={height}
       viewBox={`0 0 ${width} ${height}`}

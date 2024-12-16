@@ -17,3 +17,10 @@ Most of the project is written in TS and SCSS, and it uses functional controlled
 - npm i / npm install
 3: Run the project
 - npm run dev
+
+
+# Tests
+- Using Jest and React library for testing purposes
+- To run unit tests on component :
+  1: Open terminal where project is located ("/Users/yourName/Desktop/radarUiLibrary")
+  2: Run the following command: npm run test or npm run test:watch (scripts are defined and can be modified inside package.json file)

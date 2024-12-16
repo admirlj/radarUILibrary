@@ -1,11 +1,17 @@
 type SendProps = {
   width?: string;
   height?: string;
+  dataTestid?: string;
 };
 
-const Send: React.FC<SendProps> = ({ width = "16", height = "16" }) => {
+const Send: React.FC<SendProps> = ({
+  width = "16",
+  height = "16",
+  dataTestid,
+}) => {
   return (
     <svg
+      data-testid={dataTestid}
       width={width}
       height={height}
       viewBox={`0 0 ${width} ${height}`}
